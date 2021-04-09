@@ -1,0 +1,100 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [],
+    "structs": [
+        {
+            "name": "addmodkyc",
+            "base": "",
+            "fields": [
+                {
+                    "name": "plat_user_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "fullname",
+                    "type": "string"
+                },
+                {
+                    "name": "address",
+                    "type": "string"
+                },
+                {
+                    "name": "document_id_front_hash",
+                    "type": "string"
+                },
+                {
+                    "name": "document_id_back_hash",
+                    "type": "string"
+                },
+                {
+                    "name": "selfie_hash",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "delkyc",
+            "base": "",
+            "fields": [
+                {
+                    "name": "plat_user_id",
+                    "type": "uint64"
+                }
+            ]
+        },
+        {
+            "name": "kyc",
+            "base": "",
+            "fields": [
+                {
+                    "name": "plat_user_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "fullname",
+                    "type": "string"
+                },
+                {
+                    "name": "address",
+                    "type": "string"
+                },
+                {
+                    "name": "document_id_front_hash",
+                    "type": "string"
+                },
+                {
+                    "name": "document_id_back_hash",
+                    "type": "string"
+                },
+                {
+                    "name": "selfie_hash",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "addmodkyc",
+            "type": "addmodkyc",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "delkyc",
+            "type": "delkyc",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [
+        {
+            "name": "kyc",
+            "type": "kyc",
+            "index_type": "i64",
+            "key_names": [],
+            "key_types": []
+        }
+    ],
+    "ricardian_clauses": [],
+    "variants": []
+}

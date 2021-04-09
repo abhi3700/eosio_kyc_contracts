@@ -1,0 +1,22 @@
+Wallet (locally)
+================
+name: kyceos
+password: "PW5JqYdhqNijPCQBYZPtL46BxbFeAzQfi4Gg1bFzX4PF83qyNSC9g"
+command: `cleos wallet unlock -n tueos --password PW5JqYdhqNijPCQBYZPtL46BxbFeAzQfi4Gg1bFzX4PF83qyNSC9g`
+########################################################################
+Jungle Testnet
+************************************************************************************
+
+KYC Contracts
+====================
+kycweosiobot
+
+
+
+KYC Users
+==================
+kycusr111111
+kycusr111112
+kycusr111113
+kycusr111114
+kycusr111115

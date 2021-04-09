@@ -51,12 +51,12 @@ public:
 	 * @param document_id_back_hash - url's hash calculated before & then parsed
 	 * @param selfie_hash - selfie url's hash calculated before & then parsed
 	 */
-	ACTION addkyc( uint64_t plat_user_id,
-					const string& fullname, 
-					const string& address, 
-					const string& document_id_front_hash,
-					const string& document_id_back_hash,
-					const string& selfie_hash );
+	ACTION addmodkyc( uint64_t plat_user_id,
+						const string& fullname, 
+						const string& address, 
+						const string& document_id_front_hash,
+						const string& document_id_back_hash,
+						const string& selfie_hash );
 
 	/**
 	 * @brief - Modify KYC (any or all fields)
@@ -70,13 +70,13 @@ public:
 	 * @param document_id_back_hash - url's hash calculated before & then parsed
 	 * @param selfie_hash - selfie url's hash calculated before & then parsed
 	 */
-	ACTION modkyc( uint64_t plat_user_id, 
+/*	ACTION modkyc( uint64_t plat_user_id, 
 					const string& fullname, 
 					const string& address, 
 					const string& document_id_front_hash,
 					const string& document_id_back_hash,
 					const string& selfie_hash );
-
+*/
 
 	/**
 	 * @brief - Delete KYC by plat_user_id (automatically fetched from Telegram, Whatsapp)
@@ -90,11 +90,11 @@ public:
 	TABLE kyc
 	{
 		uint64_t plat_user_id;		// row id.
-		string fullname;
-		string address;
-		string document_id_front_hash;
-		string document_id_back_hash;
-		string selfie_hash;
+		string fullname;			// full name
+		string address;				// address
+		string document_id_front_hash;		// document id front hash
+		string document_id_back_hash;		// document id back hash
+		string selfie_hash;					// selfie hash
 
 		auto primary_key() const { return plat_user_id; }
 	};
