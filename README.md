@@ -2,4 +2,6 @@
 KYC contracts on EOSIO Blockchain
 
 ## About
-* A WhatsApp Bot where KYC docs are updated by validation on EOSIO Blockchain & store data in Cloud.
+* A WhatsApp Bot where KYC docs are added by validation on EOSIO Blockchain & then store data on Cloud database.
+
+
