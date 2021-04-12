@@ -10,13 +10,31 @@ Jungle Testnet
 KYC Contracts
 ====================
 kycweosiobot
+Private key: 5KEC6feA46GLZC3u5fifUPui226dByFh7UWmC3fMKdF2F4PJg9J
+Public key: EOS6TBtCak8k4uoFBB8mucCus5eVsqAKn4MNVXNoSMXkXydzJjvEj
+-----------------------------------------------------------------
 
 
 
 KYC Users
 ==================
 kycusr111111
+Private key: 5J6C6hpYg7N2NKCCP4sDfshx11F9SkLckrA5j6CUfRJerz9Mt2F
+Public key: EOS7UQhdeZx7YAM12S4wmXzV9oWVfKvQEvL7KCru1W2KdxHSxPkS2
+-----------------------------------------------------------------
 kycusr111112
+Private key: 5JnsKzkYdASdHrZvStdc8zHCjUaMXVNcVoh1YXxka1oKpSA64ao
+Public key: EOS6ByPRHhEpR3pPw5SgtjPvZRQiNSCNPjD9zYC14wLmPpDWGNEUP
+-----------------------------------------------------------------
 kycusr111113
+Private key: 5JyQzizvFFyWp5WJgAUe7FaJZwuDsDHH9PCmSPBCpdDjsKZerUY
+Public key: EOS7yM3w2u12m5nv1M8pdJt2bCEG83Kr1dDghnYwwfu4pSU74YVKw
+-------------------------------------------------------------
 kycusr111114
+Private key: 5Kack8jUNCd3mC3UcsZbYVpNS1ACaSSKFsX1tLKhzd3m5QFi9oB
+Public key: EOS5ozcLQkC1f7j4ByZNjfB8CgH3yC1ggHpyo68TvoxXSjc54mfPX
+-------------------------------------------------------------
 kycusr111115
+Private key: 5JVRRn5quqPXzw16QiwjftMzAjPc5KCfv9RiW17Lf24mCaGYctd
+Public key: EOS6eCJNL4zzJ3dQnjyPJYSYVXmYmeJS8dwvPDgi7mgjfchtGgkQG
+-------------------------------------------------------------
