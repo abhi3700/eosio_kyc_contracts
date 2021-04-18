@@ -1,8 +1,8 @@
 Wallet (locally)
 ================
 name: kyceos
-password: "PW5JqYdhqNijPCQBYZPtL46BxbFeAzQfi4Gg1bFzX4PF83qyNSC9g"
-command: `cleos wallet unlock -n tueos --password PW5JqYdhqNijPCQBYZPtL46BxbFeAzQfi4Gg1bFzX4PF83qyNSC9g`
+password: "PW5Jsc8aChfJYjWeEgs8KX1MnJ27HrmwgrgDDxAAiC4HtsCYSxLLL"
+command: `cleos wallet unlock -n kyceos --password PW5Jsc8aChfJYjWeEgs8KX1MnJ27HrmwgrgDDxAAiC4HtsCYSxLLL`
 ########################################################################
 Jungle Testnet
 ************************************************************************************
