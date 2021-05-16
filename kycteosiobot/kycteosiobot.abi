@@ -16,7 +16,7 @@
                     "type": "string"
                 },
                 {
-                    "name": "address",
+                    "name": "address_hash",
                     "type": "string"
                 },
                 {
@@ -56,7 +56,7 @@
                     "type": "string"
                 },
                 {
-                    "name": "address",
+                    "name": "address_hash",
                     "type": "string"
                 },
                 {

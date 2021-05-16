@@ -45,9 +45,9 @@ warning: transaction executed locally, but may not be confirmed by the network y
 #### Demo:
 * `kycusr111111` adds KYC data
 ```console
-$ cleost push action kycteosiobot addmodkyc '["2143454254", "Ramesh Sisodia", "490, first floor, \nSector 98, Mohali, \nPunjab-160098", "cc2370f40df7faab22d433e93178e5a13f475c0556cc03dd1d431cfcdb220ae3", "a36fa66069053120eaf3ee4639a4663f31e6f50528d9c4b0f7b3c4b18a6dd79b", "b52d373fdbd5b321399401c2d9d6ca83c2267bb42d403a057a858e1ed67228d7"]' -p kycteosiobot@active
-executed transaction: b5e207a1dc2cd07acafc859c4213b4a06d6a13ac3e9bd619badd54d2f5221d47  368 bytes  190 us
-#  kycteosiobot <= kycteosiobot::addmodkyc      {"plat_user_id":2143454254,"fullname":"Ramesh Sisodia","address":"490, first floor, \nSector 98, Moh...
+$ cleost push action kycteosiobot addmodkyc '["2143454254", "Ramesh Sisodia", "dc64a6ea0998adc2378869e11782b4332c5d0d2a2676cb73164ec1df0fa186f8", "cc2370f40df7faab22d433e93178e5a13f475c0556cc03dd1d431cfcdb220ae3", "a36fa66069053120eaf3ee4639a4663f31e6f50528d9c4b0f7b3c4b18a6dd79b", "b52d373fdbd5b321399401c2d9d6ca83c2267bb42d403a057a858e1ed67228d7"]' -p kycteosiobot@active
+executed transaction: e44fb1439e5c49df2cb1babe13939b50c66976034aae5b902bc793ad00a90a8d  368 bytes  232 us
+#  kycteosiobot <= kycteosiobot::addmodkyc      {"plat_user_id":2143454254,"fullname":"Ramesh Sisodia","address_hash":"490, first floor, \nSector 98...
 warning: transaction executed locally, but may not be confirmed by the network yet         ]
 ```
 * read table
@@ -58,7 +58,7 @@ $ cleost get table kycteosiobot kycteosiobot kyc --show-payer --lower 2143454254
       "data": {
         "plat_user_id": 2143454254,
         "fullname": "Ramesh Sisodia",
-        "address": "490, first floor, \nSector 98, Mohali, \nPunjab-160098",
+        "address_hash": "dc64a6ea0998adc2378869e11782b4332c5d0d2a2676cb73164ec1df0fa186f8",
         "document_id_front_hash": "cc2370f40df7faab22d433e93178e5a13f475c0556cc03dd1d431cfcdb220ae3",
         "document_id_back_hash": "a36fa66069053120eaf3ee4639a4663f31e6f50528d9c4b0f7b3c4b18a6dd79b",
         "selfie_hash": "b52d373fdbd5b321399401c2d9d6ca83c2267bb42d403a057a858e1ed67228d7"
@@ -77,8 +77,8 @@ $ cleost get table kycteosiobot kycteosiobot kyc --show-payer --lower 2143454254
 * `kycusr111111` modify KYC
 ```console
 $ cleost push action kycteosiobot addmodkyc '["2143454254", "", "", "cc2370f40df7faab22d433e93178e5a13f475c0556cc03dd1d431cfcdb220ae3", "7bad2d80e005b955f19f2221b3ad1ca86fdb4f788a45a02504a6929dcf870155", "b52d373fdbd5b321399401c2d9d6ca83c2267bb42d403a057a858e1ed67228d7"]' -p kycteosiobot@active
-executed transaction: 374fac05b0ff82f645cb69632fd37e357679a3c0c91925a2d6ac85e43a2a5ad9  304 bytes  131 us
-#  kycteosiobot <= kycteosiobot::addmodkyc      {"plat_user_id":2143454254,"fullname":"","address":"","document_id_front_hash":"cc2370f40df7faab22d4...
+executed transaction: ffb67da1da2976df5f151fbdf01d123b860b622bcff2511a357d3b6a396a2157  304 bytes  200 us
+#  kycteosiobot <= kycteosiobot::addmodkyc      {"plat_user_id":2143454254,"fullname":"","address_hash":"","document_id_front_hash":"cc2370f40df7faa...
 warning: transaction executed locally, but may not be confirmed by the network yet         ]
 ```
 * read table
@@ -88,8 +88,8 @@ $ cleost get table kycteosiobot kycteosiobot kyc --show-payer --lower 2143454254
   "rows": [{
       "data": {
         "plat_user_id": 2143454254,
-        "fullname": "",
-        "address": "490, first floor, \nSector 98, Mohali, \nPunjab-160098",
+        "fullname": "Ramesh Sisodia",
+        "address_hash": "dc64a6ea0998adc2378869e11782b4332c5d0d2a2676cb73164ec1df0fa186f8",
         "document_id_front_hash": "cc2370f40df7faab22d433e93178e5a13f475c0556cc03dd1d431cfcdb220ae3",
         "document_id_back_hash": "7bad2d80e005b955f19f2221b3ad1ca86fdb4f788a45a02504a6929dcf870155",
         "selfie_hash": "b52d373fdbd5b321399401c2d9d6ca83c2267bb42d403a057a858e1ed67228d7"
@@ -111,8 +111,8 @@ $ cleost get table kycteosiobot kycteosiobot kyc --show-payer --lower 2143454254
   "rows": [{
       "data": {
         "plat_user_id": 2143454254,
-        "fullname": "",
-        "address": "490, first floor, \nSector 98, Mohali, \nPunjab-160098",
+        "fullname": "Ramesh Sisodia",
+        "address_hash": "dc64a6ea0998adc2378869e11782b4332c5d0d2a2676cb73164ec1df0fa186f8",
         "document_id_front_hash": "cc2370f40df7faab22d433e93178e5a13f475c0556cc03dd1d431cfcdb220ae3",
         "document_id_back_hash": "7bad2d80e005b955f19f2221b3ad1ca86fdb4f788a45a02504a6929dcf870155",
         "selfie_hash": "b52d373fdbd5b321399401c2d9d6ca83c2267bb42d403a057a858e1ed67228d7"
@@ -127,3 +127,20 @@ $ cleost get table kycteosiobot kycteosiobot kyc --show-payer --lower 2143454254
 ```
 
 ### Delete KYC data
+```console
+$ cleost push action kycteosiobot delkyc '["2143454254"]' -p kycteosiobot@active
+executed transaction: 0469c48842e848e9728e0705a41e948c369ac9e2dd97bc10e7f03755e2233e87  104 bytes  154 us
+#  kycteosiobot <= kycteosiobot::delkyc         {"plat_user_id":2143454254}
+warning: transaction executed locally, but may not be confirmed by the network yet         ]
+```
+
+- Read the table
+```console
+$ cleost get table kycteosiobot kycteosiobot kyc --show-payer --lower 2143454254 --upper 2143454254
+{
+  "rows": [],
+  "more": false,
+  "next_key": "",
+  "next_key_bytes": ""
+}
+``` 

@@ -3,7 +3,7 @@
 // --------------------------------------------------------------------------------------------------------------------
 void kycteosiobot::addmodkyc( uint64_t plat_user_id,
 								const string& fullname, 
-								const string& address, 
+								const string& address_hash, 
 								const string& document_id_front_hash,
 								const string& document_id_back_hash,
 								const string& selfie_hash )
@@ -17,7 +17,7 @@ void kycteosiobot::addmodkyc( uint64_t plat_user_id,
 		kyc_table.emplace(get_self(), [&](auto &row){
 			row.plat_user_id = plat_user_id;
 			row.fullname = fullname;
-			row.address = address;
+			row.address_hash = address_hash;
 			row.document_id_front_hash = document_id_front_hash;
 			row.document_id_back_hash = document_id_back_hash;
 			row.selfie_hash = selfie_hash;
@@ -25,8 +25,8 @@ void kycteosiobot::addmodkyc( uint64_t plat_user_id,
 	}
 	else {			// modify
 		kyc_table.modify(kyc_usr_it, get_self(), [&](auto &row){
-			row.fullname = fullname;
-			if (!address.empty()) row.address = address;
+			if (!fullname.empty()) row.fullname = fullname;
+			if (!address_hash.empty()) row.address_hash = address_hash;
 			if (!document_id_front_hash.empty()) row.document_id_front_hash = document_id_front_hash;
 			if (!document_id_back_hash.empty()) row.document_id_back_hash = document_id_back_hash;
 			if (selfie_hash != "") row.selfie_hash = selfie_hash;

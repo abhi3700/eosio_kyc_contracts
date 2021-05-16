@@ -46,14 +46,14 @@ public:
 	 * 
 	 * @param plat_user_id - user id, fetched from the platform itself like Telegram, Whatsapp
 	 * @param fullname - user's full name
-	 * @param address - user's address
+	 * @param address_hash - user's address_hash
 	 * @param document_id_front_hash - url's hash calculated before & then parsed
 	 * @param document_id_back_hash - url's hash calculated before & then parsed
 	 * @param selfie_hash - selfie url's hash calculated before & then parsed
 	 */
 	ACTION addmodkyc( uint64_t plat_user_id,
 						const string& fullname, 
-						const string& address, 
+						const string& address_hash, 
 						const string& document_id_front_hash,
 						const string& document_id_back_hash,
 						const string& selfie_hash );
@@ -65,14 +65,14 @@ public:
 	 * 
 	 * @param plat_user_id - user id, fetched from the platform itself like Telegram, Whatsapp
 	 * @param fullname - user's full name
-	 * @param address - user's address
+	 * @param address_hash - user's address_hash
 	 * @param document_id_front_hash - url's hash calculated before & then parsed
 	 * @param document_id_back_hash - url's hash calculated before & then parsed
 	 * @param selfie_hash - selfie url's hash calculated before & then parsed
 	 */
 /*	ACTION modkyc( uint64_t plat_user_id, 
 					const string& fullname, 
-					const string& address, 
+					const string& address_hash, 
 					const string& document_id_front_hash,
 					const string& document_id_back_hash,
 					const string& selfie_hash );
@@ -91,7 +91,7 @@ public:
 	{
 		uint64_t plat_user_id;		// row id.
 		string fullname;			// full name
-		string address;				// address
+		string address_hash;				// address_hash
 		string document_id_front_hash;		// document id front hash
 		string document_id_back_hash;		// document id back hash
 		string selfie_hash;					// selfie hash
