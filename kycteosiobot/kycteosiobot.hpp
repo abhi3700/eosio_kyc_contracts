@@ -27,14 +27,14 @@ using eosio::extended_symbol;
 
 using std::string;
 
-CONTRACT kycweosiobot : public contract
+CONTRACT kycteosiobot : public contract
 {
 private:
 
 public:
 	using contract::contract;
 
-	kycweosiobot(name receiver, name code, datastream<const char*> ds) : 
+	kycteosiobot(name receiver, name code, datastream<const char*> ds) : 
 				contract(receiver, code, ds)
 				{}
 

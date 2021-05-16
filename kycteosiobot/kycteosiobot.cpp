@@ -1,7 +1,7 @@
-#include "kycweosiobot.hpp"
+#include "kycteosiobot.hpp"
 
 // --------------------------------------------------------------------------------------------------------------------
-void kycweosiobot::addmodkyc( uint64_t plat_user_id,
+void kycteosiobot::addmodkyc( uint64_t plat_user_id,
 								const string& fullname, 
 								const string& address, 
 								const string& document_id_front_hash,
@@ -35,7 +35,7 @@ void kycweosiobot::addmodkyc( uint64_t plat_user_id,
 }
 
 // --------------------------------------------------------------------------------------------------------------------
-void kycweosiobot::delkyc( uint64_t plat_user_id ) {
+void kycteosiobot::delkyc( uint64_t plat_user_id ) {
 	require_auth(get_self());
 
 	kyc_index kyc_table(get_self(), get_self().value);

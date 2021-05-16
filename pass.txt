@@ -13,7 +13,9 @@ kycweosiobot
 Private key: 5KEC6feA46GLZC3u5fifUPui226dByFh7UWmC3fMKdF2F4PJg9J
 Public key: EOS6TBtCak8k4uoFBB8mucCus5eVsqAKn4MNVXNoSMXkXydzJjvEj
 -----------------------------------------------------------------
-
+kycteosiobot
+Private key: 5J5rCnpZZDywDAbpjS3VSocUyZp2GYDcR4ht5VPyFJmDAFhP7o2
+Public key: EOS6dGD9CpXer5Kp2sJD9WLnEcikijoz3oU4zm7CbsY59WFxyikPT
 
 
 KYC Users
