@@ -45,3 +45,19 @@ void kycteosiobot::delkyc( uint64_t plat_user_id ) {
 
 	kyc_table.erase(kyc_usr_it);
 }
+
+// --------------------------------------------------------------------------------------------------------------------
+void kycteosiobot::setkycviews( uint64_t plat_user_id, bool view_status ) {
+	require_auth(get_self());
+
+	check( (view_status == true || view_status == false), "View status must be set to either true or false." );
+
+	kyc_index kyc_table(get_self(), get_self().value);
+	auto kyc_usr_it = kyc_table.find(plat_user_id);
+
+	check(kyc_usr_it != kyc_table.end(), "No KYC exists for this user with platform id: '" + std::to_string(plat_user_id) + "\'");
+
+	kyc_table.modify(kyc_usr_it, get_self(), [&](auto &row){
+		row.view_status = view_status;
+	});
+}

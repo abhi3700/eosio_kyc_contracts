@@ -86,6 +86,16 @@ public:
 	 */
 	ACTION delkyc( uint64_t plat_user_id );
 
+
+	/**
+	 * @brief - Set KYC View Status as true/false
+	 * @details - Set KYC View Status as true/false
+	 * 
+	 * @param plat_user_id - user id, fetched from the platform itself like Telegram, Whatsapp
+	 * @param view_status - KYC view status
+	 */
+	ACTION setkycviews( uint64_t plat_user_id, bool view_status );
+
 	// -----------------------------------------------------------------------------------------------------------------------
 	TABLE kyc
 	{
@@ -95,6 +105,7 @@ public:
 		string document_id_front_hash;		// document id front hash
 		string document_id_back_hash;		// document id back hash
 		string selfie_hash;					// selfie hash
+		bool view_status;					// true/false for admin to view user KYC data
 
 		auto primary_key() const { return plat_user_id; }
 	};

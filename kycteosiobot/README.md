@@ -3,6 +3,7 @@
 ## Actions
 * `addmodkyc`
 * `delkyc`
+* `setkycviews`
 
 ## Tables
 * `kyc`
@@ -14,8 +15,10 @@ Warning, empty ricardian clause file
 Warning, empty ricardian clause file
 Warning, action <addmodkyc> does not have a ricardian contract
 Warning, action <delkyc> does not have a ricardian contract
+Warning, action <setkycviews> does not have a ricardian contract
 Warning, action <addmodkyc> does not have a ricardian contract
 Warning, action <delkyc> does not have a ricardian contract
+Warning, action <setkycviews> does not have a ricardian contract
 ```
 
 ## Deploy
@@ -24,9 +27,9 @@ Warning, action <delkyc> does not have a ricardian contract
 $ cleost set contract kycteosiobot ./
 Reading WASM from /mnt/f/Coding/github_repos/eosio_kyc_contracts/kycteosiobot/kycteosiobot.wasm...
 Publishing contract...
-executed transaction: 08a2c3e7b85614b012185491aa8bb3446e90b9119c4b0055474cdd2549bc9ae3  8192 bytes  963 us
-#         eosio <= eosio::setcode               {"account":"kycteosiobot","vmtype":0,"vmversion":0,"code":"0061736d0100000001cb011e60000060047f7f7f7...
-#         eosio <= eosio::setabi                {"account":"kycteosiobot","abi":"0e656f73696f3a3a6162692f312e310003096164646d6f646b796300060c706c617...
+executed transaction: 48ef94c87dc41f0cbee68e3c08716d5e11ac5a5c69de2a95c51dd6ee5d9ea66a  8688 bytes  1033 us
+#         eosio <= eosio::setcode               {"account":"kycteosiobot","vmtype":0,"vmversion":0,"code":"0061736d0100000001d1011f60000060047f7f7f7...
+#         eosio <= eosio::setabi                {"account":"kycteosiobot","abi":"0e656f73696f3a3a6162692f312e310004096164646d6f646b796300060c706c617...
 warning: transaction executed locally, but may not be confirmed by the network yet         ]
 ```
 * Adding eosio.code to permissions (for inline actions)
@@ -144,3 +147,5 @@ $ cleost get table kycteosiobot kycteosiobot kyc --show-payer --lower 2143454254
   "next_key_bytes": ""
 }
 ``` 
+
+### Set KYC View Status

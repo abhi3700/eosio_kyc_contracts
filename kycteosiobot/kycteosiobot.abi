@@ -70,6 +70,24 @@
                 {
                     "name": "selfie_hash",
                     "type": "string"
+                },
+                {
+                    "name": "view_status",
+                    "type": "bool"
+                }
+            ]
+        },
+        {
+            "name": "setkycviews",
+            "base": "",
+            "fields": [
+                {
+                    "name": "plat_user_id",
+                    "type": "uint64"
+                },
+                {
+                    "name": "view_status",
+                    "type": "bool"
                 }
             ]
         }
@@ -83,6 +101,11 @@
         {
             "name": "delkyc",
             "type": "delkyc",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "setkycviews",
+            "type": "setkycviews",
             "ricardian_contract": ""
         }
     ],
