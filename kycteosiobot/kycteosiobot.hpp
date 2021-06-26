@@ -1,28 +1,28 @@
 #pragma once
 #include <eosio/eosio.hpp>
-#include <eosio/asset.hpp>
+// #include <eosio/asset.hpp>
 #include <eosio/system.hpp>
-// #include <eosio/crypto.hpp>
+#include <eosio/crypto.hpp>
 #include <string>
 
 
 using eosio::contract;
-using eosio::print;
+// using eosio::print;
 using eosio::name;
 using eosio::multi_index;
 using eosio::const_mem_fun;
 using eosio::indexed_by;
-using eosio::asset;
+// using eosio::asset;
 using eosio::check;
-using eosio::permission_level;
+// using eosio::permission_level;
 using eosio::datastream;
 // using eosio::current_time_point;
 using eosio::action;
 using eosio::same_payer;
-using eosio::symbol;
-using eosio::extended_symbol;
+// using eosio::symbol;
+// using eosio::extended_symbol;
 // using eosio::require_recipient;
-// using eosio::checksum256;
+using eosio::checksum256;
 // using eosio::action_wrapper;
 
 using std::string;
@@ -53,10 +53,10 @@ public:
 	 */
 	ACTION addmodkyc( uint64_t plat_user_id,
 						const string& fullname, 
-						const string& address_hash, 
-						const string& document_id_front_hash,
-						const string& document_id_back_hash,
-						const string& selfie_hash );
+						const checksum256& address_hash, 
+						const checksum256& document_id_front_hash,
+						const checksum256& document_id_back_hash,
+						const checksum256& selfie_hash );
 
 	/**
 	 * @brief - Modify KYC (any or all fields)
@@ -97,7 +97,7 @@ public:
 	ACTION setkycviews( uint64_t plat_user_id, bool view_status );
 
 	// -----------------------------------------------------------------------------------------------------------------------
-	TABLE kyc
+/*	TABLE kyc
 	{
 		uint64_t plat_user_id;		// row id.
 		string fullname;			// full name
@@ -111,5 +111,5 @@ public:
 	};
 
 	using kyc_index = multi_index<"kyc"_n, kyc>;
-
+*/
 };

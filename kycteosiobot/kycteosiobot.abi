@@ -17,19 +17,19 @@
                 },
                 {
                     "name": "address_hash",
-                    "type": "string"
+                    "type": "checksum256"
                 },
                 {
                     "name": "document_id_front_hash",
-                    "type": "string"
+                    "type": "checksum256"
                 },
                 {
                     "name": "document_id_back_hash",
-                    "type": "string"
+                    "type": "checksum256"
                 },
                 {
                     "name": "selfie_hash",
-                    "type": "string"
+                    "type": "checksum256"
                 }
             ]
         },
@@ -40,40 +40,6 @@
                 {
                     "name": "plat_user_id",
                     "type": "uint64"
-                }
-            ]
-        },
-        {
-            "name": "kyc",
-            "base": "",
-            "fields": [
-                {
-                    "name": "plat_user_id",
-                    "type": "uint64"
-                },
-                {
-                    "name": "fullname",
-                    "type": "string"
-                },
-                {
-                    "name": "address_hash",
-                    "type": "string"
-                },
-                {
-                    "name": "document_id_front_hash",
-                    "type": "string"
-                },
-                {
-                    "name": "document_id_back_hash",
-                    "type": "string"
-                },
-                {
-                    "name": "selfie_hash",
-                    "type": "string"
-                },
-                {
-                    "name": "view_status",
-                    "type": "bool"
                 }
             ]
         },
@@ -109,15 +75,7 @@
             "ricardian_contract": ""
         }
     ],
-    "tables": [
-        {
-            "name": "kyc",
-            "type": "kyc",
-            "index_type": "i64",
-            "key_names": [],
-            "key_types": []
-        }
-    ],
+    "tables": [],
     "kv_tables": {},
     "ricardian_clauses": [],
     "variants": [],

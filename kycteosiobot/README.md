@@ -11,14 +11,22 @@
 ## Compile
 ```console
 $ eosio-cpp kycteosiobot.cpp -o kycteosiobot.wasm
-Warning, empty ricardian clause file
-Warning, empty ricardian clause file
 Warning, action <addmodkyc> does not have a ricardian contract
 Warning, action <delkyc> does not have a ricardian contract
 Warning, action <setkycviews> does not have a ricardian contract
+/mnt/f/Coding/github_repos/eosio_kyc_contracts/kycteosiobot/kycteosiobot.cpp:4:20: warning: abigen warning (Action <addmodkyc> does not have a ricardian contract)
+void kycteosiobot::addmodkyc( uint64_t plat_user_id,
+                   ^
 Warning, action <addmodkyc> does not have a ricardian contract
+/mnt/f/Coding/github_repos/eosio_kyc_contracts/kycteosiobot/kycteosiobot.cpp:38:20: warning: abigen warning (Action <delkyc> does not have a ricardian contract)
+void kycteosiobot::delkyc( uint64_t plat_user_id ) {
+                   ^
 Warning, action <delkyc> does not have a ricardian contract
+/mnt/f/Coding/github_repos/eosio_kyc_contracts/kycteosiobot/kycteosiobot.cpp:50:20: warning: abigen warning (Action <setkycviews> does not have a ricardian contract)
+void kycteosiobot::setkycviews( uint64_t plat_user_id, bool view_status ) {
+                   ^
 Warning, action <setkycviews> does not have a ricardian contract
+3 warnings generated.
 ```
 
 ## Deploy
@@ -27,9 +35,9 @@ Warning, action <setkycviews> does not have a ricardian contract
 $ cleost set contract kycteosiobot ./
 Reading WASM from /mnt/f/Coding/github_repos/eosio_kyc_contracts/kycteosiobot/kycteosiobot.wasm...
 Publishing contract...
-executed transaction: 48ef94c87dc41f0cbee68e3c08716d5e11ac5a5c69de2a95c51dd6ee5d9ea66a  8688 bytes  1033 us
-#         eosio <= eosio::setcode               {"account":"kycteosiobot","vmtype":0,"vmversion":0,"code":"0061736d0100000001d1011f60000060047f7f7f7...
-#         eosio <= eosio::setabi                {"account":"kycteosiobot","abi":"0e656f73696f3a3a6162692f312e310004096164646d6f646b796300060c706c617...
+executed transaction: 7b670a6d0035ae6dad6f098447e54b99a9d2be88186bb042237a33cfc3243dac  15344 bytes  835 us
+#         eosio <= eosio::setcode               {"account":"kycteosiobot","vmtype":0,"vmversion":0,"code":"0061736d0100000001d4012260000060037f7f7f0...
+#         eosio <= eosio::setabi                {"account":"kycteosiobot","abi":"0e656f73696f3a3a6162692f312e320003096164646d6f646b796300060c706c617...
 warning: transaction executed locally, but may not be confirmed by the network yet         ]
 ```
 * Adding eosio.code to permissions (for inline actions)
